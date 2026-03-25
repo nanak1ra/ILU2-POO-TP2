@@ -1,5 +1,6 @@
 package histoire;
 
+import controleur.ControlAfficherMarche;
 import controleur.ControlAfficherVillage;
 import controleur.ControlEmmenager;
 import controleur.ControlLibererEtal;
@@ -133,16 +134,15 @@ public class TestControleursDesCas {
 
 		// Cas 7 : Afficher marche
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 7 : Afficher Marche");
-//		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(
-//				village);
-//		controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
-//		controlPrendreEtal.prendreEtal("Asterix", "poissons", 10);
-//		String[] marche = controlAfficherMarche.donnerInfosMarche();
-//		for (String etal : marche) {
-//			System.out.println(etal);
-//		}
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 7 : Afficher Marche");
+		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(village);
+		controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
+		controlPrendreEtal.prendreEtal("Asterix", "poissons", 10);
+		String[] marche = controlAfficherMarche.donnerInfosMarche();
+		for (String etal : marche) {
+			System.out.println(etal);
+		}
 
 //		Sortie Console :
 //		Cas 7 : Afficher Marche

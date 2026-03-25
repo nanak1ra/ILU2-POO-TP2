@@ -23,7 +23,9 @@ public class ControlLibererEtal {
 		if (controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur) == null) {
 			return null;
 		}
-		return controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).etatEtal();
+		String[] donnees = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).etatEtal();
+		controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).libererEtal();
+		return donnees;
 	}
 
 }
