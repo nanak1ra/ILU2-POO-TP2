@@ -8,12 +8,21 @@ public class ControlAcheterProduit {
 	private ControlVerifierIdentite controlVerifierIdentite;
 
 	public ControlAcheterProduit(ControlVerifierIdentite controlVerifierIdentite,
-			ControlTrouverEtalVendeur controlTrouverEtalVendeur,
-			Village village) {
+			ControlTrouverEtalVendeur controlTrouverEtalVendeur, Village village) {
 		this.village = village;
 		this.controlVerifierIdentite = controlVerifierIdentite;
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
+	public boolean verifIdentite(String nomAcheteur) {
+		return controlVerifierIdentite.verifierIdentite(nomAcheteur);
+	}
+
+	public String[] trouverVendeurProduit(String produit) {
+		return controlTrouverEtalVendeur.trouverVendeurProduit(produit);
+	}
+
+	public int acheterProduit(String nomVendeur, int quantite) {
+		return controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).acheterProduit(quantite);
+	}
 }

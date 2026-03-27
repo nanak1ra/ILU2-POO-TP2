@@ -20,15 +20,17 @@ public class BoundaryAfficherMarche {
 			sortie.append(nomAcheteur);
 			sortie.append(", vous trouverez au marché :\n");
 
-			for (int i = 0; i < infosMarche.length; i++) {
-				sortie.append("-");
+			for (int i = 0; i < infosMarche.length; i += 3) {
+				sortie.append("- ");
 				sortie.append(infosMarche[i]);
 				sortie.append(" qui vend ");
-				sortie.append(i + 1);
+				sortie.append(infosMarche[i + 1]);
 				sortie.append(" ");
-				sortie.append(i + 2);
+				sortie.append(infosMarche[i + 2]);
 				sortie.append(".\n");
 			}
+
+			System.out.println(sortie.toString());
 		}
 	}
 }

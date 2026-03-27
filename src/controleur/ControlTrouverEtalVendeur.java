@@ -19,4 +19,20 @@ public class ControlTrouverEtalVendeur {
 		}
 		return etal;
 	}
+
+	public String[] trouverVendeurProduit(String produit) {
+		String[] vendeurs = null;
+		Gaulois[] vendeursGaulois = village.rechercherVendeursProduit(produit);
+
+		if (vendeursGaulois != null) {
+			int len = vendeursGaulois.length;
+			vendeurs = new String[len];
+
+			for (int i = 0; i < len; i++) {
+				vendeurs[i] = vendeursGaulois[i].getNom();
+			}
+		}
+		return vendeurs;
+	}
+
 }
